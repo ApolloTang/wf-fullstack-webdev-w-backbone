@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>PAGE TITLE</title>
+    <script src="static/bundle.js"></script>
+    <script>
+        // See note in main.js:
+
+        // if used: $ browserify -r ./app/main > static/bundle.js
+        // require with the following:
+
+        // var main = require('/app/main');
+
+        // if used: $ browserify -r ./app/main:myApp > static/bundle.js
+        // require with the following:
+
+        var main = require('myApp');
+
+        console.log(main());
+
+    </script>
+    <!-- scripts -->
+</head>
+
+<body>
+</body>
+
+</html>

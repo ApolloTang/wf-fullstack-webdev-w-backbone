@@ -1,0 +1,5 @@
+var Backbone = require('backbone');
+var myModule = require('../app/myModule'); // this modules require
+                                           // relative path because it is not resite in
+                                           // node_modules
+console.log(myModule());
