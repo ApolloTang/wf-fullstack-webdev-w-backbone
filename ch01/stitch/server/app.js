@@ -6,7 +6,7 @@ var stitch  = require('stitch');
 
 // To "stitch" the client-side modules together
     var package = stitch.createPackage({
-        paths: [__dirname + '/../app'],
+        paths: [path.resolve(__dirname + '/../app')],
         dependencies: [
             __dirname + '/../libs/jquery-1.4.2.js',
             __dirname + '/../libs/underscore-1.3.3.js',
@@ -22,7 +22,7 @@ var stitch  = require('stitch');
     app.use(express.static(pathStatic));
 
 // Deliver content of stich package as vendor.js
-    app.get('/vendor.js', package.createServer());
+    app.get('/client.js', package.createServer());
 
 // We add a basic route that serves an index.html
 app.get('/', function(req, res) {
